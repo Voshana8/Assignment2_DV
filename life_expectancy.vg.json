@@ -1,0 +1,75 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A scatterplot showing Life satisafaction vs life expectancy",
+    "height":300,
+    "width":440,
+    "background":"aliceblue",
+    "params": [
+        {
+            "name": "continent_selection",
+            "bind":{
+                "input": "select",
+                "options":[
+                    null,
+                    "Asia",
+                    "Africa",
+                    "Americas",
+                    "Europe",
+                    "Oceania"
+                ],
+                "labels": [
+                    "Show all",
+                    "Asia",
+                    "Africa",
+                    "Americas",
+                    "Europe",
+                    "Oceania"
+                ],
+                "name": "Continent Selection : "
+            }
+        }
+    ],
+    "data": {
+      "url": "lifeexpectancy.csv"
+    },
+    
+    
+    "transform": [
+        {
+            "filter": "continent_selection == null || datum.region == continent_selection"}
+            
+    ],
+    "mark": "circle",
+    "encoding": {
+      "x": {
+        "field": "Life_satisfaction",
+        "type": "quantitative",
+        "title":"Life Ladder",
+        "scale": {"zero": false}
+      },
+      "y": {
+        "field": "Life_expectancy",
+        "type": "quantitative",
+        "title":"Life Expectancy",
+        "scale": {"zero": false}
+      },
+      "color": {"field": "region", "type": "nominal"},
+      "size": {
+        "field": "Population",
+        "type": "quantitative",
+        "scale": {
+        "type": "threshold",
+        "domain": [1000000, 10000000, 50000000, 100000000, 500000000],
+        "range": [10, 50, 150, 200, 300, 400]
+        },
+        "legend": {"format": ".1s"}
+        },
+        "tooltip": [
+            {"field":"Entity","type": "nominal","title":"Country"},
+            {"field":"region","type": "nominal","title":"Region"},
+            {"field":"Population","type": "quantitative","title":"Population"}
+        ]
+    }
+    
+  }
+  

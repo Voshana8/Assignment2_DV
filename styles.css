@@ -1,0 +1,90 @@
+h1{
+    color:rgb(6, 83, 103) ;
+    text-align: center;
+    font-size: 80px;
+    font-family:sans-serif;
+    letter-spacing: 300%;
+    padding: none;
+    margin-bottom: 55px;
+    font-family: 'Noto Sans', sans-serif;
+    
+
+    
+    
+}
+body{
+    background-color: #f7f5bc;
+    border: 20ch;
+    
+   
+}
+.container{
+    padding: 3%;
+    border-radius: 20px;
+ width: 300%;
+   background-color:#cff8f5;
+  
+   
+}
+.row2{
+    padding-top: 3%;
+    text-align: center;
+}
+.rowpic{
+    display: flex;
+    align-items: center;
+}
+.row3{
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+}
+#ladderexpl{
+    text-align: center;
+    padding-top: 2%;
+    text-align: justify;
+
+}
+#life_ladder{
+    display: flex;
+    align-items:center;
+}
+.cont2{
+    text-align: center;
+}
+img{
+    width: 550px;
+    height: 400px;
+    object-fit: cover;
+    padding-left: 20px;
+    border-radius: 50px;
+  
+}
+.container{
+    border-radius:none;
+}
+.row5{
+    text-align: center;
+}
+.firstp{
+    font-weight: 10;
+    word-wrap: break-word;
+    text-align: justify;
+   
+}
+.centretext{
+    text-align: justify;
+}
+.finalimg{
+    width: fit-content;
+    padding: 10px;
+    align-items: center;
+}
+.finalword{
+    padding: 20px;
+    text-align: justify;
+    align-items: center;
+}
+div{
+    color: rgb(4, 12, 92);
+}

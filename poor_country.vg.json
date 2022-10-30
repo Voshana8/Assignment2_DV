@@ -1,0 +1,19 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title":"Suicide rate of the poorest countries ",
+    "description": "Suicide rates over time in different countries",
+    "data": {"url": "poorcountry.csv"},
+    "width":452,
+    "height":400,
+    "mark": "line",
+    "background":"aliceblue",
+    
+    
+    "encoding": {
+      "x": {"field": "Year", "type": "temporal"},
+      "y": {"field": "suicide_percentage", "type": "quantitative","title":"Suicide Percenatage"},
+      "color": {"field": "Country_name", "type": "nominal","title":"Region"}
+      
+    }
+    
+  }
